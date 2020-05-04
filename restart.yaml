@@ -1,5 +1,6 @@
 ---
- - hosts: siblings
+ - name: An ansible demonstration template
+   hosts: siblings
    become: yes
    remote_user: root
    tasks:  
