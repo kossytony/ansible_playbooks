@@ -1,0 +1,9 @@
+---
+ - hosts: siblings
+   become: yes
+   remote_user: root
+   tasks:  
+     - name: restart system
+       reboot:
+        
+    
