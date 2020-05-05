@@ -1,0 +1,12 @@
+---
+ - name: An ansible demonstration
+   hosts: siblings
+   become: yes
+   tasks:  
+    - name: installing git and httpd  
+      yum:
+        name: "{{ packages }}"
+      vars:
+        packages:
+         - git
+         - httpd

@@ -1,0 +1,9 @@
+---
+ - name: An ansible demonstration
+   hosts: siblings
+   become: yes
+   tasks:  
+     - name: deleting a file
+       file:  
+        path: /home/linux1user/testing_ansible1.txt
+        state: absent

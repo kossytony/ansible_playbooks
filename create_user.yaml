@@ -1,0 +1,15 @@
+---
+ - name: An ansible demonstration
+   hosts: siblings
+   become: yes
+   tasks:  
+     - name: creating users with a  loop 
+       user:   
+        name: "{{item.name}}"
+        group: "{{item.group}}"
+        state: "{{item.state}}"
+       loop:
+        - {name: 'linux2user', group: 'wheel', state: 'present'}
+        - {name: 'linux3user', group: 'wheel', state: 'present'}
+        - {name: 'admin2', group: 'wheel', state: 'present'}
+       

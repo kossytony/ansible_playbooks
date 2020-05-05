@@ -1,0 +1,10 @@
+---
+ - name: An ansible demonstration
+   hosts: siblings
+   become: yes
+   tasks:  
+     - name: copying a file from master to remote 
+       copy:  
+        src: /home/linux1user/testing_ansible1.txt
+        dest: /home/linux1user/Desktop/testing_ansible1.txt
+        remote_src: yes

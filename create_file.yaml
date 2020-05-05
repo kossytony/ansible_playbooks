@@ -1,0 +1,10 @@
+---
+ - name: An ansible demonstration
+   hosts: siblings
+   become: yes
+   tasks:  
+     - name: touch a random file via shell command 
+       shell: touch testing_ansible1.txt && 
+              echo examples test >> testing_ansible1.txt
+        
+    
